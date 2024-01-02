@@ -184,6 +184,7 @@ function handleMenuSelection()
 
     local scanLoopActive = false
 
+    
     while true do
         displayMenu()
 

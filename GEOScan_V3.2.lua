@@ -235,7 +235,7 @@ function handleMenuSelection()
                 repeat
                     performScanWithOreListAndSettings(oreList, settings)
                     os.sleep(cooldownTime)
-                until os.pullEvent() == "key" and read() == "5"
+                until os.pullEvent("key") == "5"
                 scanLoopActive = false
             else
                 print("Scan loop is already active.")

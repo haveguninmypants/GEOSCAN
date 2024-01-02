@@ -1,5 +1,18 @@
 -- Geo Scanner Script with Selection Menu, Ore List, and Client Settings File Handling
 
+function displayMenu()
+    print("==== Geo Scanner Menu ====")
+    print("1. Perform Scan")
+    print("2. Add Ore to List")
+    print("3. Remove Ore from List")
+    print("4. Start Scan Loop")
+    print("5. Exit Program")
+    print("==========================")
+    print("Enter your choice:")
+end
+
+
+
 local oreListFileName = "ORE_TABLE.ore"
 local settingsFileName = "CLIENT-SETTINGS.SET"
 local maxOptionsPerScreen = 7

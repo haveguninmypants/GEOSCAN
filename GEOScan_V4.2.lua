@@ -128,7 +128,7 @@ function performScanWithOreListAndSettings(oreList, settings)
             local distB = math.sqrt(b.x^2 + b.y^2 + b.z^2)
             return distA < distB
         end)
-
+shell.run("clear")
         -- Display information about the closest 3 ores or fewer if not enough are found
         local oresToShow = math.min(#filteredScan, maxOresToShow)
         for i = 1, oresToShow do
@@ -231,8 +231,8 @@ function handleMenuSelection()
         elseif choice == 4 then
             while true do 
                 performScanWithOreListAndSettings(oreList, settings)
-                sleep(3)
-                shell.run("clear")
+                sleep(1)
+                
             end
         elseif choice == 5 then
             print("Exiting Geo Scanner program.")

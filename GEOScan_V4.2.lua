@@ -233,6 +233,7 @@ function handleMenuSelection()
                 performScanWithOreListAndSettings(oreList, settings)
                 sleep(3)
                 shell.run("clear")
+            end
         elseif choice == 5 then
             print("Exiting Geo Scanner program.")
             break
@@ -241,7 +242,7 @@ function handleMenuSelection()
         end
     end
 end
-end
+
 shell.run("clear")
 -- Start the program
 handleMenuSelection()

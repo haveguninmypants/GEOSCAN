@@ -17,7 +17,7 @@ local geoScanner = peripheral.wrap("back")
 local oreListFileName = "ORE_TABLE.ore"
 local settingsFileName = "CLIENT-SETTINGS.SET"
 local maxOptionsPerScreen = 7
-local cooldownTime = 5  -- in seconds
+local cooldownTime = 2  -- in seconds
 local maxOresToShow = 3
 
 -- Function to read ore names from a file or create a new file
@@ -135,7 +135,6 @@ function performScanWithOreListAndSettings(oreList, settings)
             local blockInfo = filteredScan[i]
             print("Ore found:", blockInfo.name)
             print("Coordinates:", blockInfo.x, blockInfo.y, blockInfo.z)
-            print("Distance:", math.sqrt(blockInfo.x^2 + blockInfo.y^2 + blockInfo.z^2))
         end
     else
         print("Scan failed. Error:", errorMsg)

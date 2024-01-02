@@ -241,6 +241,7 @@ function handleMenuSelection()
         end
     end
 end
+end
 shell.run("clear")
 -- Start the program
 handleMenuSelection()

@@ -1,5 +1,5 @@
 -- Geo Scanner Script with Selection Menu, Ore List, and Client Settings File Handling
-
+l
 function displayMenu()
     print("==== Geo Scanner Menu ====")
     print("1. Perform Scan")

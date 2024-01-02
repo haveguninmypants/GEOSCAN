@@ -1,5 +1,6 @@
--- Geo Scanner Script with Selection Menu, Ore List, and Client Settings File Handling
-local geoScanner = peripheral.wwrap("back")
+
+
+
 function displayMenu()
     print("==== Geo Scanner Menu ====")
     print("1. Perform Scan")
@@ -11,8 +12,8 @@ function displayMenu()
     print("Enter your choice:")
 end
 
-
-
+-- Geo Scanner Script with Selection Menu, Ore List, and Client Settings File Handling
+local geoScanner = peripheral.wrap("back")
 local oreListFileName = "ORE_TABLE.ore"
 local settingsFileName = "CLIENT-SETTINGS.SET"
 local maxOptionsPerScreen = 7
@@ -156,6 +157,25 @@ function table.contains(table, value)
     end
     return false
 end
+
+-- Function to add an ore to the list
+function addOreToList(oreList)
+    print("Enter the name of the ore to add:")
+    local oreName = read()
+
+    table.insert(oreList, oreName)
+
+    -- Save the updated ore list to the file
+    local oreListFile = io.open(oreListFileName, "a")
+    if oreListFile then
+        oreListFile:write(oreName .. "\n")
+        oreListFile:close()
+        print("Ore added to the list:", oreName)
+    else
+        print("Failed to add ore to the list.")
+    end
+end
+
 -- Function to remove an ore from the list
 function removeOreFromList(oreList)
     print("Select an ore to remove by typing its corresponding number:")
@@ -196,7 +216,6 @@ function handleMenuSelection()
 
     local scanLoopActive = false
 
-    
     while true do
         displayMenu()
 

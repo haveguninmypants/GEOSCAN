@@ -229,17 +229,10 @@ function handleMenuSelection()
         elseif choice == 3 then
             removeOreFromList(oreList)
         elseif choice == 4 then
-            if not scanLoopActive then
-                scanLoopActive = true
-                print("Starting scan loop. Press 5 to stop.")
-                repeat
-                    performScanWithOreListAndSettings(oreList, settings)
-                    os.sleep(cooldownTime)
-                until os.pullEvent("key") == "5"
-                scanLoopActive = false
-            else
-                print("Scan loop is already active.")
-            end
+            while true do 
+                performScanWithOreListAndSettings(oreList, settings)
+                sleep(3)
+                shell.run("clear")
         elseif choice == 5 then
             print("Exiting Geo Scanner program.")
             break
@@ -248,6 +241,6 @@ function handleMenuSelection()
         end
     end
 end
-
+shell.run("clear")
 -- Start the program
 handleMenuSelection()

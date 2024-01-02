@@ -112,7 +112,7 @@ function performScanWithOreListAndSettings(oreList, settings)
 
     -- Check if the scan was successful
     if scanResult then
-        print("Scan successful!")
+        
 
         -- Filter scan result to include only allowed ores
         local filteredScan = {}
@@ -134,16 +134,16 @@ function performScanWithOreListAndSettings(oreList, settings)
         for i = 1, oresToShow do
             local blockInfo = filteredScan[i]
             print("Ore found:", blockInfo.name)
-            print("Coordinates:", blockInfo.x, blockInfo.y, blockInfo.z)
+            print("Coordinates:", blockInfo.x, blockInfo.y, blockInfo.z, " \n")
         end
     else
-        print("Scan failed. Error:", errorMsg)
+        
     end
 
     -- Output settings
-    print("Current Settings:")
+    
     for key, value in pairs(settings) do
-        print(key .. "=" .. value)
+        
     end
 end
 
